@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerFrom"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="2dp"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/layoutFooter"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandableQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:el_duration="500"
+            app:el_expanded="true"
+            app:el_parallax="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/drawable_rectangle_white"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButtonPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:fontFamily="@font/kalameh_regular"
+                android:text="@string/previousPage"
+                app:icon="@drawable/ic_previous_page"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:iconTint="@color/white"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/materialButtonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:fontFamily="@font/kalameh_regular"
+                android:text="@string/nextPage"
+                app:icon="@drawable/ic_next_page"
+                app:iconGravity="end"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:iconTint="@color/white"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/drawbale_rectangle_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/expandableQuestions">
+
+            <TextView
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="ارسال اطلاعات"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

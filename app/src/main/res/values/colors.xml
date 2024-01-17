@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primaryColor">#22d9f1</color>
+    <color name="primaryVariant">#038a9b</color>
+
+    <color name="gradientCenter">#009aae</color>
+    <color name="buttonStroke">#006471</color>
+
+    <color name="textColor">#005661</color>
+    <color name="main">@color/white</color>
+    <color name="footer">#f1f1f1</color>
+    <color name="disableText">#5a5a5a</color>
+    <color name="flatAluminum">#c2c7cd</color>
+    <color name="disablText">#9C9A9A</color>
+    <color name="tourInfo">#17004d</color>
+    <color name="textHint">#B4B4B4</color>
+
+    <color name="backCurveGray">#e8e5e5</color>
+    <color name="backCurveStroke">#D2D2D2</color>
+    <color name="grayLight">#ebebeb</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color">@color/white</color>
+    <color name="textChartGreen">#006755</color>
+    <color name="textChartBlue">#004d68</color>
+    <color name="textChartBrown">#5d2e00</color>
+
+    <color name="snackBack">#FFBB86FC</color>
+
+    <color name="datePickerConfirmButtonBackColor">@color/primaryVariant</color>
+    <color name="datePickerDateBackColor">@color/primaryVariant</color>
+    <color name="datePickerRangeColor">#90EBF6</color>
+    <color name="datePickerHoliday">#FF5252</color>
+    <color name="frightnight">#004895</color>
+    <color name="water">#CEE6FF</color>
+    <color name="red">#ff0000</color>
+    <color name="jupiter">#e2e2e2</color>
+    <color name="lightsaberblue">#18EBF6</color>
+    <color name="cacodemonRed">#9d0000</color>
+    <color name="orange">#E65100</color> <!-- orange 900 -->
+    <color name="green">#1B5E20</color> <!-- green 900 -->
+    <color name="grey_light_light">#f1f1f1</color>
+
+    <array name="bg_color">
+        <item name="bg_screen1">#f64c73</item>
+        <item name="bg_screen2">#20d2bb</item>
+        <item name="bg_screen3">#FF0015</item>
+        <item name="bg_screen4">#c873f4</item>
+        <item name="gradientOrange">#FF416C</item>
+        <item name="gradientLightBlue">#376DF6</item>
+        <item name="gradientLightGreen">#077700</item>
+        <item name="separatorColor">#18102C</item>
+        <item name="GreenYellow">#ADFF2F</item>
+        <item name="SkyBlue">#87CEEB</item>
+        <item name="Black">#000000</item>
+    </array>
+
+
+    <!--    Background Colors-->
+    <color name="warning_color">#FBC02D</color>
+    <color name="error_color">#D50000</color>
+    <color name="success_color">#17B978</color>
+    <color name="info_color">#0340DA</color>
+    <color name="delete_color">#0288D1</color>
+
+
+    <!--    Custom Colors-->
+    <color name="custom_warning_color">#FF9800</color>
+    <color name="custom_error_color">#F44336</color>
+    <color name="custom_success_color">#8BC34A</color>
+    <color name="custom_info_color">#2196F3</color>
+    <color name="custom_delete_color">#673AB7</color>
+    <color name="custom_dark_toast">#121212</color>
+
+
+    <!--    Background Transparent Colors-->
+    <color name="warning_bg_color">#33FBC02D</color>
+    <color name="error_bg_color">#33D32F2F</color>
+    <color name="success_bg_color">#3317B978</color>
+    <color name="info_bg_color">#330340DA</color>
+    <color name="delete_bg_color">#330288D1</color>
+
+    <!--    Dark Toast bg-->
+    <color name="dark_bg_color">#2F3032</color>
+
+
+
+</resources>

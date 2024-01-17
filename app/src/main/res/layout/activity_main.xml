@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr"
+        android:background="@drawable/drawable_back_report"
+        tools:context="com.msa.zar.view.activity.MainActivity">
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            android:background="@drawable/drawable_back_report"
+            app:layout_constraintBottom_toTopOf="@id/constraintLayoutFooterMenu"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_host" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutFooterMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_main_footer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <com.msa.supervisor.view.custom.CustomMenu
+                android:id="@+id/customMenuSetting"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/customMenuReport"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu_icon="@drawable/ic_setting"
+                app:menu_icon_select="@drawable/ic_setting_select"
+                app:menu_textSize="@dimen/_8sdp"
+                app:menu_title="@string/setting" />
+
+            <com.msa.supervisor.view.custom.CustomMenu
+                android:id="@+id/customMenuReport"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/customMenuHome"
+                app:layout_constraintStart_toEndOf="@id/customMenuSetting"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu_icon="@drawable/ic_report"
+                app:menu_icon_select="@drawable/ic_report_select"
+                app:menu_textSize="@dimen/_8sdp"
+                app:menu_title="@string/report" />
+
+            <com.msa.supervisor.view.custom.CustomMenu
+                android:id="@+id/customMenuHome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/customMenuTracing"
+                app:layout_constraintStart_toEndOf="@id/customMenuReport"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu_icon="@drawable/ic_home"
+                app:menu_icon_select="@drawable/ic_home_select"
+                app:menu_textSize="@dimen/_8sdp"
+                app:menu_title="@string/home" />
+
+            <com.msa.supervisor.view.custom.CustomMenu
+                android:id="@+id/customMenuTracing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/customMenuProfile"
+                app:layout_constraintStart_toEndOf="@id/customMenuHome"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu_icon="@drawable/ic_location"
+                app:menu_icon_select="@drawable/ic_location_select"
+                app:menu_textSize="@dimen/_8sdp"
+                app:menu_title="@string/tracing" />
+
+            <com.msa.supervisor.view.custom.CustomMenu
+                android:id="@+id/customMenuProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/customMenuTracing"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu_icon="@drawable/ic_approvals"
+                app:menu_icon_select="@drawable/ic_approvals_select"
+                app:menu_textSize="@dimen/_8sdp"
+                app:menu_title="@string/approvals" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

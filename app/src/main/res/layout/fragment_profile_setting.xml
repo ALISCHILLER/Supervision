@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/drawable_rectangle_curve"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/dotted"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="@dimen/_100sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25">
+
+                    <ImageView
+                        android:id="@+id/imageviewProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/profileDescription"
+                        android:scaleType="fitXY" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txtUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="آرش احمدیان"
+                    android:textColor="@color/frightnight"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/cardViewProfile"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="کد پرسنلی :"
+                    android:textColor="@color/frightnight"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/cardViewProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+
+                <TextView
+                    android:id="@+id/txtCodeUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="1500025"
+                    android:textColor="@color/frightnight"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView48"
+                    app:layout_constraintTop_toBottomOf="@+id/txtUser" />
+
+                <TextView
+                    android:id="@+id/txtType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text=""
+                    android:textColor="@color/frightnight"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/cardViewProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutNews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/dotted"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout17"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout17"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout17">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="خبرنامه"
+                android:textColor="@color/frightnight"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/newsIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/newsIcon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutquestion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dotted"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="@+id/layoutNews"
+            app:layout_constraintStart_toStartOf="@+id/layoutNews"
+            app:layout_constraintTop_toBottomOf="@+id/layoutNews">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="پرسشنامه"
+                android:textColor="@color/frightnight"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/questionIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/questionIcon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dotted"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="@+id/layoutNews"
+            app:layout_constraintStart_toStartOf="@+id/layoutNews"
+            app:layout_constraintTop_toBottomOf="@+id/layoutquestion">
+
+
+            <TextView
+                android:id="@+id/txtBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="لیست شعبات"
+                android:textColor="@color/frightnight"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/listIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/listIcon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutUpdate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dotted"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="@+id/layoutNews"
+            app:layout_constraintStart_toStartOf="@+id/layoutNews"
+            app:layout_constraintTop_toBottomOf="@+id/layoutList">
+
+
+            <TextView
+                android:id="@+id/txtUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="دانلود آخرین نسخه برنامه "
+                android:textColor="@color/frightnight"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/updateIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/updateIcon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dotted"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="@+id/layoutNews"
+            app:layout_constraintStart_toStartOf="@+id/layoutNews"
+            app:layout_constraintTop_toBottomOf="@+id/layoutUpdate">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="خروج"
+                android:textColor="@color/frightnight"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/logoutIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/logoutIcon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/versionApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mitra_bold"
+            android:text="@string/versionFotter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/frightnight"
+            app:layout_constraintStart_toStartOf="parent"
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

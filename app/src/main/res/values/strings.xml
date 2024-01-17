@@ -1,0 +1,131 @@
+<resources>
+
+    <string name="app_name">Supervisor</string>
+    <string name="dataReceivedIsEmpty">اطلاعات دریافت شده خالی است</string>
+    <string name="dataSendingIsEmpty">اطلاعات ارسالی خالی است</string>
+    <string name="userNameIsEmpty">نام کاربری را وارد نمایید</string>
+    <string name="passcodeIsEmpty">رمز ورود را وارد نمایید</string>
+    <string name="setting">تنظیمات</string>
+    <string name="report">گزارشات</string>
+    <string name="home">خانه</string>
+    <string name="tracing">ردیابی</string>
+    <string name="profile">پروفایل</string>
+    <string name="dismiss">بستن</string>
+    <string name="notFoundPage">صفحه مورد نظر یافت نشد</string>
+    <string name="bePatient">شکیبا باشید …</string>
+    <string name="onAuthenticationError">اثر انگشت تایید نشد</string>
+    <string name="userName">نام کاربری</string>
+    <string name="userNameFiori">نام کاربری فیوری</string>
+    <string name="userCode">کد پرسنلی</string>
+    <string name="password">رمز عبور</string>
+    <string name="passwordFiori">رمز عبور فیوری</string>
+    <string name="enter">ورود</string>
+    <string name="exit">خروج</string>
+    <string name="tourInformation">اطلاعات تور</string>
+    <string name="chooseVisitor">انتخاب ویزیتور</string>
+    <string name="listVisitor">لیست ویزیتورها</string>
+    <string name="numberOfNonVisit">تعداد عدم ویزیت</string>
+    <string name="numberOfReturn">تعداد برگشتی</string>
+    <string name="numberOfNonOrder">تعداد عدم سفارش</string>
+    <string name="numberOfVisit">تعداد مشتریان\nویزیت شده</string>
+    <string name="numberOfVisitOnRoute">تعداد ویزیت شده\nدر مسیر</string>
+    <string name="valueOfOrder">ارزش\nسفارش</string>
+    <string name="countOfOrder">تعداد\nسفارش</string>
+    <string name="countOfCustomer">تعداد کل مشتریان</string>
+    <string name="news">خبرنامه</string>
+    <string name="questionnaire">پرسشنامه</string>
+    <string name="pinCodeList">لیست پین کدها</string>
+    <string name="requestList">لیست درخواست ها</string>
+    <string name="showVisitorList">نمایش لیست ویزیتورها</string>
+    <string name="noVisitorsHaveBeenSelected">هیچ ویزیتوری انتخاب نشده است</string>
+    <string name="noDateHaveBeenSelected">تاریخی انتخاب نشده است</string>
+    <string name="dateTo">تا تاریخ</string>
+    <string name="dateFrom">از تاریخ</string>
+    <string name="chooseDate">انتخاب تاریخ</string>
+    <string name="pleaseSelectReportType">لطفا نوع گزارش را انتخاب نمایید</string>
+
+
+    <string name="iconDescription">icon</string>
+    <string name="settingDescription">setting</string>
+    <string name="reportDescription">report</string>
+    <string name="homeDescription">home</string>
+    <string name="tracingDescription">tracing</string>
+    <string name="profileDescription">profile</string>
+    <string name="logoDescription">logo</string>
+    <string name="live_location">موقعیت زنده</string>
+    <string name="routing">مسیریابی</string>
+    <string name="name_visitor">نام ویزیتور:</string>
+    <string name="location">موقعیت:</string>
+    <string name="mobile">موبایل:</string>
+    <string name="todo">TODO</string>
+    <string name="cancel">بستن</string>
+    <string name="confirm">تایید</string>
+    <string name="approvals">تاییدها</string>
+
+    <string name="last_received_location">آخرین دریافت موقعیت:</string>
+    <string name="select_all">انتخاب همه</string>
+    <string name="confirm_data">تایید اطلاعات</string>
+    <string name="getData">دریافت اطلاعات</string>
+    <string name="getReport">دریافت گزارش</string>
+    <string name="final_amount_invoice">مبلغ نهایی فاکتور :</string>
+    <string name="period">مدت:</string>
+    <string name="cash_amount">مبلغ نقد:</string>
+    <string name="remittance_amount">مبلغ حواله:</string>
+    <string name="check_amount">مبلغ چک:</string>
+    <string name="ross_settlement">راس تسویه:</string>
+    <string name="invoice_date">تاریخ فاکتور:</string>
+    <string name="price_inovice_balance">مبلغ مانده فاکتور:</string>
+    <string name="code_customer">کد مشتری</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">جستجو</string>
+    <string name="phone">تلفن :</string>
+    <string name="name_customer">نام مشتری:</string>
+    <string name="address">آدرس:</string>
+    <string name="the_details">جزئیات</string>
+    <string name="customer_approval">تایید مشتری</string>
+    <string name="supervisor_zar">SUPERVISOR</string>
+    <string name="default_notification_channel_id" translatable="false">پیام های دریافتی</string>
+    <string name="default_notification_channel_name" translatable="true">Supervisor</string>
+    <string name="attendanceTime">ساعت حضور : %1$s</string>
+    <string name="addressmarker">آدرس : %1$s</string>
+    <string name="fullnetWeight">جمع کل تعداد کارتن : %1$s</string>
+
+    <string name="txtFinalAmountInvoice">مبلغ نهایی فاکتور : %1$s</string>
+    <string name="invoiceBalanceAmount">مبلغ مانده فاکتور: %1$s</string>
+    <string name="totalDisplay">نمایش جمع کل</string>
+    <string name="downloadTheExcelFile">دانلود فایل اکسل</string>
+    <string name="attachment_is_mandatory">پیوست اجباری است !</string>
+    <string name="max_and_min_value_are_respectively">مقدار بیشینه و کمینه به ترتیب عبارتند از :</string>
+    <string name="this_field_is_mandatory">این پرسش اجباری است !</string>
+    <string name="saving_picture">ذخیره سازی عکس</string>
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="error">خطا</string>
+    <string name="error_saving_attachment">خطا در ذخیره پیوست</string>
+    <string name="ok">تایید</string>
+
+    <string name="previousPage">صفحه قبلی</string>
+    <string name="nextPage">صفحه بعدی</string>
+
+
+    <string name="text_warning">Warning</string>
+    <string name="text_success">Success</string>
+    <string name="text_error">Error</string>
+    <string name="text_info">Info</string>
+    <string name="text_no_internet">No internet connection</string>
+    <string name="text_mock_description">Lorem Ipsum is simply dummy text of the printing</string>
+    <string name="confirm_pincode">تایید پین کد</string>
+    <string name="loctionCustomer">لوکیشن مشتری</string>
+    <string name="date">تاریخ:</string>
+    <string name="TheDeviceDoesNotSupport">تشخیص گفتار در این دستگاه پشتیبانی نمی شود !</string>
+    <string name="total">جمع کل</string>
+
+    <string name="pin1">پین رسیدی</string>
+    <string name="pin2">پین چک</string>
+    <string name="pin3">پین کل مرجوع</string>
+    <string name="pin4">پین ویرایش مشتری</string>
+    <string name="request_pin">%s درخواست %s برای مشتری با نام %s را دارد.</string>
+    <string name="totalNetWeight">جمع کل وزن خالص : %1$s</string>
+    <string name="versionFotter"> تولید و توسعه توسط گروه نرم افزار گروه صنعتی زر %1$s</string>
+</resources>

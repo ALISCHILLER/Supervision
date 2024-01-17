@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout14"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintDimensionRatio="W,0:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/constraintLayout16"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/mitra_bold"
+                        android:lines="1"
+                        android:layout_marginTop="5dp"
+                        android:text="کدمشتری:"
+                        android:textColor="@color/frightnight"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/txtcodecustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/mitra_bold"
+                        android:lines="1"
+                        android:text="14006989"
+                        android:textColor="@color/frightnight"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="2dp"
+
+                        android:fontFamily="@font/mitra_bold"
+                        android:lines="1"
+                        android:text="نام مشتری:"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <TextView
+                        android:id="@+id/txtnamecustomer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/mitra_bold"
+                        android:lines="1"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView15"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtcodecustomer" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/mitra_bold"
+                        android:lines="1"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/address"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                    <TextView
+                        android:id="@+id/txtaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/mitra_bold"
+                        android:lines="1"
+                        android:text="شیروان دور میدان دانشگاه"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView16"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtnamecustomer" />
+
+                    <TextView
+                        android:id="@+id/btnShowHiden"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/drawable_rectangle_fright_night"
+                        android:fontFamily="@font/mitra_bold"
+                        android:lines="1"
+                        android:padding="@dimen/_3sdp"
+                        android:text="مشاهده ی تغییرات"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_6sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtaddress" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintDimensionRatio="W,0:1"
+                    app:layout_constraintEnd_toStartOf="@+id/constraintLayout14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/drawable_rectangle_prearl"
+                        app:layout_constraintDimensionRatio="W,6:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/mitra_bold"
+                            android:text="@string/phone"
+                            android:textColor="@color/frightnight"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txt_phone"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/mitra_bold"
+                            android:text="36544435"
+                            android:textColor="@color/frightnight"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/txt1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/drawable_rectangle_prearl"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
+                        app:layout_constraintStart_toStartOf="@+id/constraintLayout7"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
+
+                        <TextView
+                            android:id="@+id/txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/mitra_bold"
+                            android:text="@string/mobile"
+                            android:textColor="@color/frightnight"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/txt_mobile"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/mitra_bold"
+                            android:textColor="@color/frightnight"
+                            android:text="09186732174"
+                            android:textSize="@dimen/_8sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/txt"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/btnConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/drawable_btn_confirm_green"
+                        android:padding="@dimen/_3sdp"
+                        android:text="تایید مشتری"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnFailure"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
+
+                    <TextView
+                        android:id="@+id/btnFailure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/drawable_btn_disapproval_red"
+                        android:padding="@dimen/_3sdp"
+                        android:text="عدم تایید مشتری"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/constraintLayout8"
+                        app:layout_constraintStart_toEndOf="@+id/btnConfirm"
+                        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <net.cachapa.expandablelayout.ExpandableLayout
+                android:id="@+id/expandableMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:el_duration="500"
+                app:el_expanded="true"
+                app:el_parallax="0.5"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout15"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/drawable_rectangle_fright_night"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutheader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:text="تغییر شماره تلفن "
+                                android:textColor="@color/white"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView27"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:text="تغییر آدرس"
+                                android:textColor="@color/white"
+                                app:layout_constraintEnd_toStartOf="@+id/textView28"
+                                app:layout_constraintStart_toEndOf="@+id/textView26"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/textView28"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:text="تغییر کد نقش"
+                                android:textColor="@color/white"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@color/flatAluminum"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutheader" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/layoutheader"
+                            app:layout_constraintStart_toStartOf="@+id/layoutheader"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutheader">
+
+                            <TextView
+                                android:id="@+id/txtOldPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/mitra_bold"
+                                android:text="+98-915523698"
+                                android:textColor="@color/flatAluminum"
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtNewPhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="3dp"
+                                android:fontFamily="@font/mitra_bold"
+                                android:text="+98-915523698"
+                                android:textColor="@color/flatAluminum"
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/txtOldPhone" />
+
+
+                            <TextView
+                                android:id="@+id/txtOldAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/mitra_bold"
+                                android:text="17 شهریور کارگر شمالی"
+                                android:textColor="@color/flatAluminum"
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintEnd_toStartOf="@+id/txtOldCode"
+                                app:layout_constraintStart_toEndOf="@+id/txtOldPhone"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtNewAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/mitra_bold"
+                                android:text="17 شهریور کارگر شمالی"
+                                android:textColor="@color/flatAluminum"
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintEnd_toStartOf="@+id/txtNewCode"
+                                app:layout_constraintStart_toEndOf="@+id/txtNewPhone"
+                                app:layout_constraintTop_toBottomOf="@+id/txtOldAddress" />
+
+                            <TextView
+                                android:id="@+id/txtOldCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="578963"
+                                android:fontFamily="@font/mitra_bold"
+                                android:textColor="@color/flatAluminum"
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintEnd_toStartOf="@+id/textView30"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtNewCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/mitra_bold"
+                                android:text="578963"
+                                android:textColor="@color/flatAluminum"
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintEnd_toStartOf="@+id/textView32"
+                                app:layout_constraintTop_toBottomOf="@+id/txtOldCode" />
+
+
+                            <TextView
+                                android:id="@+id/textView30"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginEnd="5dp"
+                                android:fontFamily="@font/mitra_bold"
+                                android:text="قبل ویرایش:"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/mitra_bold"
+                                android:text="بعد ویرایش:"
+                                android:textColor="@color/white"
+
+                                android:textSize="@dimen/_7sdp"
+                                app:layout_constraintEnd_toEndOf="@+id/textView30"
+                                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </net.cachapa.expandablelayout.ExpandableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

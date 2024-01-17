@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomMenu">
+        <attr name="menu_icon" format="reference"/>
+        <attr name="menu_icon_select" format="reference"/>
+        <attr name="menu_title" format="string"/>
+        <attr name="menu_textSize" format="dimension"/>
+    </declare-styleable>
+    <attr name="colorIcons" format="color" />
+    <attr format="color" name="colorPrimary"/>
+    <declare-styleable name="SimpleToolbar">
+        <attr name="title" />
+        <attr name="backgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

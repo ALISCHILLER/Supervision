@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.msa.supervisor.model.data.response.report.CustomerNoSaleReportModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="W,0:1"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutNetWeight"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    app:layout_constraintDimensionRatio="W,0:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="شماره تلفن:"
+                        android:fontFamily="@font/mitra_bold"
+                        android:textColor="@color/cacodemonRed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="09155894320"
+                        android:fontFamily="@font/mitra_bold"
+                        android:textColor="@color/cacodemonRed"
+                        app:layout_constraintEnd_toStartOf="@+id/textView6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/mitra_bold"
+                        android:text="شماره موبایل:"
+                        android:textColor="@color/cacodemonRed"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/txtMobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="09155894320"
+                        android:fontFamily="@font/mitra_bold"
+                        android:textColor="@color/cacodemonRed"
+                        app:layout_constraintEnd_toStartOf="@+id/textView13"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/drawable_rectangle_prearl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/layoutNetWeight"
+                    app:layout_constraintStart_toStartOf="@+id/layoutNetWeight"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutNetWeight">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="آدرس فروشگاه:"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtaddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/mitra_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="17 شهریور شمالی - جنب سالن ورزشی آرتا"
+                        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout13"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:padding="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout11"
+                app:layout_constraintDimensionRatio="W,1:0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout11"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout11">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="کد مشتری:"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtCodeCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="015052521"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="نام مشتری:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/txtNameCustomer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="مجید دوست علی پور"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCodeCustomer" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="نام فروشگاه:"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                <TextView
+                    android:id="@+id/txtNameShop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:fontFamily="@font/mitra_bold"
+                    android:text="قنادی گرندی"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView22"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtNameCustomer" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="فعالیت مشتری:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"
+                    android:fontFamily="@font/mitra_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                <TextView
+                    android:id="@+id/txtActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:text="لوازم قنادی و نانوایی"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"
+                    android:fontFamily="@font/mitra_bold"
+                    app:layout_constraintEnd_toStartOf="@+id/textView24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtNameShop" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="گروه مشتری:"
+                    android:fontFamily="@font/mitra_bold"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/txtGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="1dp"
+                    android:text="خرده فروشی"
+                    android:fontFamily="@font/mitra_bold"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView25"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtActivity" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

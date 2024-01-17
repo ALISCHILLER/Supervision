@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="value"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_back_home_count">
+
+        <TextView
+            android:id="@+id/textViewNonVisitTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.65"
+            android:textSize="@dimen/_6sdp"
+            android:textColor="@color/tourInfo"
+            android:gravity="center"
+            android:lines="1"
+            android:fontFamily="@font/mitra_bold"
+            android:paddingVertical="@dimen/_2sdp"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:text="@{title}"
+            android:background="@drawable/drawable_back_home_count_title"/>
+
+        <TextView
+            android:id="@+id/textViewNonVisitCount"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="-5dp"
+            android:background="@drawable/drawable_back_home_count_value"
+            android:gravity="center"
+            android:lines="1"
+            android:paddingHorizontal="@dimen/_2sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:fontFamily="@font/mitra_bold"
+            android:textColor="@color/frightnight"
+            android:textSize="@dimen/_6sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/textViewNonVisitTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewNonVisitTitle"
+            app:layout_constraintTop_toTopOf="@id/textViewNonVisitTitle"
+            app:setValue="@{value}" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintTop_toTopOf="@id/textViewNonVisitTitle"
+            app:layout_constraintBottom_toBottomOf="@id/textViewNonVisitTitle"
+            app:layout_constraintStart_toStartOf="@id/textViewNonVisitCount"
+            app:layout_constraintEnd_toStartOf="@id/textViewNonVisitCount"
+            android:background="@drawable/drawable_triangle"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

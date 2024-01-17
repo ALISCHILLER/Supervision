@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.msa.supervisor.view.fragment.splash.SplashFragment">
+
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.msa.supervisor.view.fragment.login.LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.msa.supervisor.view.fragment.home.HomeFragment"
+        android:label="homeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_listPinCodeFragment"
+            app:destination="@id/listPinCodeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_customersQuestionnaireFragment"
+            app:destination="@id/customersQuestionnaireFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pinCodeConfirmFragment"
+            app:destination="@id/pinCodeConfirmFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.msa.supervisor.view.fragment.map.MapFragment" />
+
+    <fragment
+        android:id="@+id/reportChooseFragment"
+        android:name="com.msa.supervisor.view.fragment.report.choose.ReportChooseFragment" />
+
+    <fragment
+        android:id="@+id/approvalsFragment"
+        android:name="com.msa.supervisor.view.fragment.approvals.ApprovalsFragment">
+        <action
+            android:id="@+id/action_approvalsFragment_to_confirmOrdersFragment"
+            app:destination="@id/confirmOrdersFragment" />
+        <action
+            android:id="@+id/action_approvalsFragment_to_customerconfirmationFragment"
+            app:destination="@id/customerconfirmationFragment" />
+        <action
+            android:id="@+id/action_approvalsFragment_to_pinCodeConfirmFragment"
+            app:destination="@id/pinCodeConfirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerconfirmationFragment"
+        android:name="com.msa.supervisor.view.fragment.customerconfirmation.CustomerconfirmationFragment" />
+    <fragment
+        android:id="@+id/confirmOrdersFragment"
+        android:name="com.msa.supervisor.view.fragment.confirmorders.ConfirmOrdersFragment">
+        <action
+            android:id="@+id/action_confirmOrdersFragment_to_orderConfirmDetailsFragment"
+            app:destination="@id/orderConfirmDetailsFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/orderConfirmDetailsFragment"
+        android:name="com.msa.supervisor.view.fragment.confirmorders.OrderConfirmDetailsFragment">
+
+        <argument
+            android:name="itemOrderConfirmDetails"
+            app:argType="com.msa.supervisor.model.data.response.order.OrderConfirmModel"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_orderConfirmDetailsFragment_to_confirmOrdersFragment"
+            app:destination="@id/confirmOrdersFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/listPinCodeFragment"
+        android:name="com.msa.supervisor.view.fragment.pincode.ListPinCodeFragment" />
+    <fragment
+        android:id="@+id/profileSettingFragment"
+        android:name="com.msa.supervisor.view.fragment.profilesetting.ProfileSettingFragment">
+        <action
+            android:id="@+id/action_profileSettingFragment_to_customersQuestionnaireFragment"
+            app:destination="@id/customersQuestionnaireFragment" />
+        <action
+            android:id="@+id/action_profileSettingFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customersQuestionnaireFragment"
+        android:name="com.msa.supervisor.view.fragment.questionnaire.CustomersQuestionnaireFragment">
+        <action
+            android:id="@+id/action_customersQuestionnaireFragment_to_questionnaireFormFragment"
+            app:destination="@id/questionnaireFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionnaireFormFragment"
+        android:name="com.msa.supervisor.view.fragment.questionnaire.QuestionnaireFormFragment">
+        <argument
+            android:name="customerId"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="questionnaireId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_questionnaireFormFragment_to_customersQuestionnaireFragment"
+            app:destination="@id/customersQuestionnaireFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/pinCodeConfirmFragment"
+        android:name="com.msa.supervisor.view.fragment.pincodeconfirm.PinCodeConfirmFragment"
+        />
+
+    <action
+        android:id="@+id/action_goto_reportChooseFragment"
+        app:destination="@id/reportChooseFragment"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/action_goto_HomeFragment"
+        app:destination="@id/homeFragment"
+        app:launchSingleTop="true" />
+
+
+    <action
+        android:id="@+id/action_goto_MapFragment"
+        app:destination="@id/mapFragment"
+        app:launchSingleTop="true" />
+
+    <action
+        android:id="@+id/action_goto_approvalsFragment"
+        app:destination="@id/approvalsFragment"
+        app:launchSingleTop="true" />
+
+
+    <action
+        android:id="@+id/action_goto_ProfileFragment"
+        app:destination="@id/profileSettingFragment"
+        app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.msa.supervisor.view.fragment.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+
+
+</navigation>

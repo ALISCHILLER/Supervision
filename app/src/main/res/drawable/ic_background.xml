@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item>-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <size android:height="100dp" android:width="100dp"/>-->
+<!--            <solid android:color="@color/datePickerRangeColor"/>-->
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--    <item android:top="0dp" >-->
+<!--        <rotate-->
+<!--            android:fromDegrees="52"-->
+<!--            android:toDegrees="45"-->
+<!--            android:pivotX="-45%"-->
+<!--            android:pivotY="90%" >-->
+<!--            <shape-->
+<!--                android:shape="rectangle" >-->
+
+<!--                <solid-->
+<!--                    android:color="@color/frightnight"/>-->
+<!--            </shape>-->
+<!--        </rotate>-->
+<!--    </item>-->
+    <item  >
+    <vector
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="44dp"
+        android:height="24dp"
+        android:viewportWidth="24.0"
+        android:viewportHeight="24.0">
+
+        <path
+            android:fillColor="@color/datePickerDateBackColor"
+            android:pathData="M0 24v-24h24z"/>
+    </vector>
+    </item>
+
+    <item android:top="100dp">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="119dp"
+            android:height="126dp"
+            android:viewportWidth="119"
+            android:viewportHeight="126">
+            <path
+                android:strokeWidth="1"
+                android:pathData="M117.632,124.928L1.686,125.144L118.003,2.092L117.632,124.928Z"
+                android:fillColor="@color/frightnight"
+                android:strokeColor="@color/frightnight"/>
+        </vector>
+    </item>
+
+</layer-list>

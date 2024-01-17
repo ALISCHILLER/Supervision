@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:scrollbars="none"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl">
+
+                <TextView
+                    android:id="@+id/txtHNumberItem"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="کد ویزیتور"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtHNameVisitor"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="نام ویزیتور"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtHNumberItem"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtHOrderWeight"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="کل سفارش"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtHNameVisitor"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtHInProgressOrder"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="سفارش در راه"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtHOrderWeight"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+
+                <TextView
+                    android:id="@+id/txtHFinalWeight"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="سفارش فاکتور شده"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtHInProgressOrder"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layoutDirection="rtl"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/horizontalScrollHeader"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl">
+
+                <TextView
+                    android:id="@+id/txtNumberItem"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_border_primary_color"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="کد ویزیتور"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtNameVisitor"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_border_primary_color"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="نام ویزیتور"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtNumberItem"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtOrderWeight"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_border_primary_color"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="کل سفارش"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtNameVisitor"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtInProgressOrder"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_border_primary_color"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="سفارش در راه"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtOrderWeight"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+
+                <TextView
+                    android:id="@+id/txtFinalWeight"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_border_primary_color"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="سفارش فاکتور شده"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtInProgressOrder"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandDealersItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:el_duration="500"
+            app:el_expanded="false"
+            app:el_parallax="0.5"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerDealersItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layoutDirection="rtl"
+            android:visibility="gone"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/expandDealersItem"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl">
+
+                <TextView
+                    android:id="@+id/txtFNumberItem"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="@string/total"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtFNameVisitor"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtFNumberItem"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtFOrderWeight"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="کل سفارش"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtFNameVisitor"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/txtFInFProgressOrder"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="سفارش در راه"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtFOrderWeight"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+
+                <TextView
+                    android:id="@+id/txtFFinalWeight"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/drawable_rectangle_red"
+                    android:textColor="@color/frightnight"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="سفارش فاکتور شده"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtFInFProgressOrder"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="RtlCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

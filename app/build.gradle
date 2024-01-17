@@ -1,0 +1,177 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-android'
+    id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
+    id 'com.google.devtools.ksp'
+}
+
+android {
+    namespace 'com.msa.supervisor'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.msa.supervisor"
+        minSdk 26
+        ext.versionType = 'beta'
+        targetSdk 33
+        versionCode 1
+        versionName "0.4"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            //create Ali Soleimani
+            // تنظیمات نام فایل خروجی
+            def date = new Date()
+            def formattedDate = date.format('yyMMdd_HHmm')
+
+            def versionName = android.defaultConfig.versionName
+            def fileName = android.defaultConfig.applicationId.replaceAll('com.', '') + "_V" + versionName + "_" + formattedDate + ".apk"
+            // تنظیم نام فایل خروجی
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = fileName
+                }
+            }
+        }
+    }
+
+    lintOptions {
+        baseline file("lint-baseline.xml")
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    //Hilt
+    implementation 'androidx.work:work-runtime-ktx:2.8.1'
+    implementation 'androidx.hilt:hilt-work:1.0.0'
+    implementation 'com.google.dagger:hilt-android:2.45'
+
+    kapt 'com.google.dagger:hilt-android-compiler:2.45'
+
+
+    // Required when asking for permission to post notifications (starting in Android 13)
+    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("androidx.fragment:fragment-ktx:1.6.1")
+    //firebase
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
+
+
+    //Room DB
+    implementation "androidx.room:room-runtime:2.5.2"
+    ksp "androidx.room:room-compiler:2.5.2"
+
+    //Open Street Map
+    implementation 'org.osmdroid:osmdroid-android:6.1.16'
+    implementation 'com.github.MKergall:osmbonuspack:6.9.0'
+
+    //Glide Load Image
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    ksp 'com.github.bumptech.glide:ksp:4.15.0'
+
+    implementation 'com.github.latifimehrdad:ZarCore:0.4.6'
+
+    implementation "com.github.skydoves:powerspinner:1.2.4"
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+
+    //SignalR
+    implementation 'com.microsoft.signalr:signalr:5.0.5'
+    implementation 'org.slf4j:slf4j-jdk14:1.7.25'
+
+    //picasso LoadImage
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+
+    //progressBar
+    implementation 'com.github.MackHartley:RoundedProgressBar:3.0.0'
+
+    //Lottie File
+    implementation 'com.airbnb.android:lottie:6.0.0'
+
+    implementation 'com.otaliastudios:cameraview:2.7.2'
+
+    implementation 'com.github.classiczires:Android-Switch-Segmented-Control:1.0.5'
+
+
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+}
+
+kapt {
+    correctErrorTypes true
+}
+tasks.configureEach { task ->
+    if (task.name == 'assembleRelease') {
+        task.doLast {
+            commitRelease()
+        }
+    }
+}
+//create Ali Soleimani
+private void commitRelease() {
+    println("assmble relase finished. we check version type. if version type was empty or null then we commit.")
+
+        def version = "release/Supervisor-" + generateVersionName()
+        try {
+            try {
+                runCommands("git", "add", ".")
+                runCommands("git", "commit", "-m", version)
+                runCommands("git", "tag", "-a", "Supervisor -" + generateVersionName(), "-m", "${version}")
+                runCommands("git", "push", "origin", "--tags")
+                runCommands("git", "push", "origin")
+            } catch (Exception e) {
+                println(e.message)
+            }
+            runCommands("git", "tag", "-a", "Supervisor-" + generateVersionName(), "-m", "${version}")
+            runCommands("git", "push", "origin", "--tags")
+            runCommands("git", "push", "origin")
+        } catch (Exception e) {
+            println(e.message)
+        }
+        runCommands("git", "status")
+
+
+}
+//committagreplace2
+
+private static String runCommands(String... commands) {
+    def process = new ProcessBuilder(commands).redirectErrorStream(true).start()
+    process.waitFor()
+    def result = ''
+    process.inputStream.eachLine { result += it + '\n' }
+    def errorResult = process.exitValue() == 0
+    if (!errorResult) {
+        throw new IllegalStateException(result)
+    }
+    return result
+}
+
+def generateVersionName() {
+    def date = new Date()
+    def formattedDate = date.format('yyMMdd_HHmm')
+    def versionCode = android.defaultConfig.versionCode
+    return "${versionCode}.${formattedDate}"
+}

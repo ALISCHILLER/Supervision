@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/drawable_back_report">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textDirection="rtl"
+                android:layoutDirection="rtl"
+                android:layout_margin="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <EditText
+                    android:id="@+id/search_searchbar"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_border_white"
+                    android:drawableStart="@drawable/navbar_icon_search"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:fadingEdge="horizontal"
+                    android:fadingEdgeLength="5dp"
+                    android:hint="جستجو"
+                    android:imeOptions="actionSearch"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/mitra_bold"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:paddingEnd="35dp"
+                    android:paddingBottom="10dp"
+                    android:requiresFadingEdge="horizontal"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/search_barcodeScan"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:visibility="invisible"
+                    android:foregroundGravity="center"
+                    android:scaleType="centerInside"
+                    app:layout_constraintBottom_toBottomOf="@+id/search_searchbar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/search_searchbar" />
+
+                <ImageButton
+                    android:id="@+id/search_voice"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/borderless_ripple"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/voice_search"
+                    app:layout_constraintBottom_toBottomOf="@+id/search_searchbar"
+                    app:layout_constraintEnd_toEndOf="@+id/search_searchbar"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="@+id/search_searchbar"
+                    app:layout_constraintTop_toTopOf="@+id/search_searchbar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/textConfirminformation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/drawable_report_curve_circle"
+                android:fontFamily="@font/mitra_light"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/getData"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="bold"
+                android:textColor="@color/frightnight"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/layoutSearch"
+                app:layout_constraintStart_toStartOf="@+id/layoutSearch"
+                app:layout_constraintTop_toBottomOf="@+id/layoutSearch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutSetting" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

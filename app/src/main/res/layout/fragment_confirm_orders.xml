@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/drawable_back_report">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayoutSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_button"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7">
+
+            <TextView
+                android:id="@+id/textViewShowVisitorDialog"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_date_view"
+                android:fontFamily="@font/mitra_light"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/showVisitorList"
+                android:textColor="@color/frightnight"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintEnd_toStartOf="@id/constraintLayoutVisitorTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutVisitorTitle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@drawable/drawable_border_primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/textViewShowVisitorDialog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textViewShowVisitorDialog"
+                app:layout_constraintTop_toTopOf="@id/textViewShowVisitorDialog">
+
+                <ImageView
+                    android:id="@+id/imageViewVisitor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:contentDescription="@string/iconDescription"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_visitor_white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="W,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/mitra_bold"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:text="@string/chooseVisitor"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewVisitor" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textDirection="rtl"
+                android:layoutDirection="rtl"
+                android:layout_margin="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayoutVisitorTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayoutVisitorTitle"
+                >
+                <EditText
+                    android:id="@+id/search_searchbar"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/drawable_border_white"
+                    android:drawableStart="@drawable/navbar_icon_search"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:fadingEdge="horizontal"
+                    android:fadingEdgeLength="5dp"
+                    android:hint="جستجو"
+                    android:imeOptions="actionSearch"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:fontFamily="@font/mitra_bold"
+                    android:paddingStart="15dp"
+                    android:paddingTop="10dp"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:paddingEnd="35dp"
+                    android:paddingBottom="10dp"
+                    android:requiresFadingEdge="horizontal"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/search_barcodeScan"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="false"
+                    android:visibility="invisible"
+                    android:foregroundGravity="center"
+                    android:scaleType="centerInside"
+                    app:layout_constraintBottom_toBottomOf="@+id/search_searchbar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/search_searchbar" />
+
+                <ImageButton
+                    android:id="@+id/search_voice"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/borderless_ripple"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/voice_search"
+                    app:layout_constraintBottom_toBottomOf="@+id/search_searchbar"
+                    app:layout_constraintEnd_toEndOf="@+id/search_searchbar"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="@+id/search_searchbar"
+                    app:layout_constraintTop_toTopOf="@+id/search_searchbar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/btnRequestOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/drawable_report_curve_circle"
+                android:fontFamily="@font/mitra_light"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="دریافت اطلاعات"
+                android:textSize="@dimen/_9sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/constraintLayoutVisitorTitle"
+                app:layout_constraintStart_toStartOf="@id/textViewShowVisitorDialog"
+                app:layout_constraintTop_toBottomOf="@id/layoutSearch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOrder"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutSetting" />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSendAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_send_all"
+            android:visibility="invisible"
+            app:borderWidth="0dp"
+            app:elevation="@dimen/elevation_default"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/frightnight" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

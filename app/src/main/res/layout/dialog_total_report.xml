@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_dialog"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="جمع کل"
+            android:textSize="@dimen/_8sdp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/drawable_total"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <TextView
+            android:id="@+id/txtVisitor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawable_rectangle_aria"
+            android:lines="5"
+            android:text="علی یاسینی _ مهدی اسقایی"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/drawable_rectangle_aria"
+        android:fontFamily="@font/mitra_bold"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:text="از        01/10/1401         تا        30/10/1401"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout19"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/txtFinalAmountInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/drawable_rectangle_curve"
+        android:fontFamily="@font/mitra_bold"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/frightnight"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDate"
+        tools:ignore="RtlCompat" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/drawable_back_curve_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFinalAmountInvoice">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_remittance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/jupiter"
+            app:layout_constraintBottom_toTopOf="@+id/layout_cash"
+            app:layout_constraintDimensionRatio="W,0:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/remittance_amount"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_remittance_amount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_remittance_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="123944"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_cash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@color/jupiter"
+            app:layout_constraintEnd_toEndOf="@+id/layout_clearing"
+            app:layout_constraintStart_toStartOf="@+id/layout_remittance"
+            app:layout_constraintTop_toBottomOf="@+id/layout_remittance">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/cash_amount"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_cash_amount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_cash_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="123944"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@color/jupiter"
+            app:layout_constraintEnd_toEndOf="@+id/layout_remittance"
+            app:layout_constraintStart_toStartOf="@+id/layout_remittance"
+            app:layout_constraintTop_toBottomOf="@+id/layout_cash">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/check_amount"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_check_amount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_check_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="123944"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView11"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_clearing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+
+            android:background="@color/jupiter"
+            app:layout_constraintEnd_toEndOf="@+id/layout_remittance"
+            app:layout_constraintStart_toStartOf="@+id/layout_remittance"
+            app:layout_constraintTop_toBottomOf="@+id/layout_check">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/ross_settlement"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_clearing_amount"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_clearing_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/mitra_bold"
+                android:text="123944"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtInvoiceBalanceAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_rectangle_red"
+        android:textColor="@color/red"
+        android:fontFamily="@font/mitra_bold"
+        android:gravity="center_vertical"
+        android:textAlignment="center"
+        android:lines="2"
+        android:text="مبلغ مانده فاکتور : 10/113/161/076"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/drawable_button"
+        android:gravity="center_vertical"
+        android:lines="2"
+        android:text="@string/cancel"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtInvoiceBalanceAmount"
+        tools:ignore="RtlCompat" />
+</androidx.constraintlayout.widget.ConstraintLayout>
